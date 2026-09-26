@@ -71,6 +71,9 @@
   .status.wip{color:var(--accent2);}
   .status.soon{color:var(--ink-faint);}
   .proj a.link{font-size:12.5px; color:var(--ink); border-bottom:1px solid var(--ink-faint); text-decoration:none;}
+  .statline{font-size:12.5px; color:var(--accent); margin:6px 0 0;}
+  .group-label{font-size:11px; color:var(--ink-faint); margin:28px 0 2px; letter-spacing:.02em;}
+  .group-label:first-child{margin-top:0;}
 
   footer{padding:30px 0 44px; color:var(--ink-faint); font-size:13px;}
   footer a{color:var(--ink-dim);}
@@ -135,6 +138,44 @@
         </div>
       </div>
 
+      <p class="group-label mono">CFD TURBULENCE MODEL VALIDATION</p>
+
+      <div class="proj">
+        <div class="proj-main">
+          <h3>Turbulence Model Benchmarking on a Simplified Cybertruck Geometry</h3>
+          <p>Steady RANS (k–ε vs. k–ω SST) validated against reference drag/lift data at Re ≈ 588,000, with mesh independence confirmed to within 3%.</p>
+          <p class="statline mono">SST: 14% drag error, 20–30% lift error vs. reference · k–ε: 20% drag error</p>
+        </div>
+        <div style="text-align:right;">
+          <div class="status live mono">REPORT AVAILABLE</div>
+          <a class="link" href="reports/cybertruck-turbulence-validation.pdf" target="_blank" rel="noopener">Read report</a>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-main">
+          <h3>Supersonic Wedge Flow — Oblique Shock Validation</h3>
+          <p>Density-based Euler CFD (Fluent, AUSM scheme) of oblique shocks at M∞ = 2, 3, 4, with a reproducible plateau-extraction method for post-shock quantities.</p>
+          <p class="statline mono">Within 1.5% (pressure ratio) and 2% (temperature) of analytical oblique-shock theory</p>
+        </div>
+        <div style="text-align:right;">
+          <div class="status live mono">REPORT AVAILABLE</div>
+          <a class="link" href="reports/supersonic-wedge-flow.pdf" target="_blank" rel="noopener">Read report</a>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-main">
+          <h3>Drag Reduction Through a Sudden Pipe Contraction</h3>
+          <p>Laminar CFD (ANSYS CFX) validated against Durst &amp; Loy's experimental vena-contracta data, then a DoE parametric study on a wall-mounted obstacle to cut pressure loss.</p>
+          <p class="statline mono">GCI 0.88–1.86% · up to 6.64% pressure-loss reduction from the optimized obstacle</p>
+        </div>
+        <div style="text-align:right;">
+          <div class="status live mono">REPORT AVAILABLE</div>
+          <a class="link" href="reports/pipe-contraction-drag.pdf" target="_blank" rel="noopener">Read report</a>
+        </div>
+      </div>
+
       <div class="proj">
         <div class="proj-main">
           <h3>Vortex-Induced Vibration &amp; POD Analysis</h3>
@@ -145,23 +186,55 @@
         </div>
       </div>
 
+      <p class="group-label mono">AERODYNAMIC DESIGN OPTIMIZATION</p>
+
+      <div class="proj">
+        <div class="proj-main">
+          <h3>DoE–RSM–MOGA Optimization of a Two-Element Downforce Wing</h3>
+          <p>Response-surface optimization (ANSYS DesignXplorer) of a two-element inverted wing, verified against a direct CFD run at the recommended optimum.</p>
+          <p class="statline mono">+54.2% downforce, +21.4% L/D · verified within 0.88% (Cl) / 6.1% (Cd) of the surrogate model</p>
+        </div>
+        <div style="text-align:right;">
+          <div class="status live mono">REPORT AVAILABLE</div>
+          <a class="link" href="reports/two-element-wing-optimization.pdf" target="_blank" rel="noopener">Read report</a>
+        </div>
+      </div>
+
+      <p class="group-label mono">FEM &amp; STRUCTURAL ANALYSIS</p>
+
       <div class="proj">
         <div class="proj-main">
           <h3>Transient Thermo-Mechanical Analysis of a Gas Turbine Disc</h3>
-          <p>FEM-based stress analysis of a rotating disc under centrifugal and thermal loading, with transient temperature fields from cold start to steady operation.</p>
+          <p>Coupled thermal + structural FEM of a SIEMENS GT35C turbine disc from cold start to 3000 s, validated against a closed-form analytical hoop-stress solution.</p>
+          <p class="statline mono">1.17% error vs. analytical benchmark · thermal gradient raises peak bore stress from 478 to 585 MPa</p>
         </div>
         <div style="text-align:right;">
-          <div class="status soon mono">REPORT COMING SOON</div>
+          <div class="status live mono">REPORT AVAILABLE</div>
+          <a class="link" href="reports/turbine-disc-thermomechanical.pdf" target="_blank" rel="noopener">Read report</a>
         </div>
       </div>
 
       <div class="proj">
         <div class="proj-main">
-          <h3>Aerodynamic &amp; Compressible Flow Simulation</h3>
-          <p>NACA airfoil comparison of XFOIL panel methods against viscous/inviscid CFD, plus a finite-difference solver for 1D compressible flow through a de Laval nozzle.</p>
+          <h3>FE Verification: Beam, Thick Pipe &amp; Notched Bar</h3>
+          <p>Systematic FE-vs-analytical verification across element type, mesh density, and 2D idealization (plane stress/strain/axisymmetric).</p>
+          <p class="statline mono">Notched-bar stress concentration converges to 3.2% of the analytical handbook value</p>
         </div>
         <div style="text-align:right;">
-          <div class="status soon mono">REPORT COMING SOON</div>
+          <div class="status live mono">REPORT AVAILABLE</div>
+          <a class="link" href="reports/fem-verification-basics.pdf" target="_blank" rel="noopener">Read report</a>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-main">
+          <h3>Load-Application Methods for a Pin-Loaded Cantilever Beam</h3>
+          <p>Comparison of Remote Force, Bearing Load, and explicit frictional Contact modelling for a pin-in-hole joint, with mesh convergence on displacement and von Mises stress.</p>
+          <p class="statline mono">Coupled/Rigid constraints create artificial stress singularities — Deformable and Contact are the physically valid choices</p>
+        </div>
+        <div style="text-align:right;">
+          <div class="status live mono">REPORT AVAILABLE</div>
+          <a class="link" href="reports/pin-load-methods.pdf" target="_blank" rel="noopener">Read report</a>
         </div>
       </div>
 
