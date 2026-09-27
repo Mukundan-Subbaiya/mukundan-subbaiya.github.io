@@ -92,6 +92,10 @@
   .compare span{font-size:12px; color:var(--ink-faint);}
   .compare .win .num{color:var(--accent);}
   .cta{display:inline-block; margin-top:4px; font-size:13px; color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent);}
+  .featured-links{display:flex; justify-content:flex-end; gap:18px; margin-top:8px;}
+  .featured-links a{font-size:13px; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--ink-faint);}
+  .featured-links a.primary{color:var(--accent); border-bottom-color:var(--accent);}
+  .featured-links a:hover{color:var(--accent); border-bottom-color:var(--accent);}
 
   /* Projects */
   .group-label{font-size:11px; color:var(--ink-faint); margin:26px 0 4px; letter-spacing:.05em;}
@@ -209,7 +213,10 @@
         <div class="win"><span class="num mono">37.6%</span><span>This LES's recirculation-length error vs. DNS</span></div>
         <div><span class="num mono">0.98M</span><span>cell hexahedral mesh, y⁺ &lt; 0.3</span></div>
       </div>
-      <a class="cta mono" href="reports/periodic-hill-les.pdf" target="_blank" rel="noopener">→ Read the full report (PDF)</a>
+      <div class="featured-links mono">
+        <a href="periodic-hill-les-gist.html" class="primary">View</a>
+        <a href="reports/periodic-hill-les.pdf" target="_blank" rel="noopener">PDF</a>
+      </div>
     </div>
 
     <p class="group-label mono">IN PROGRESS</p>
